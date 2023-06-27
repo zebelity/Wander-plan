@@ -1,0 +1,25 @@
+<h2>Let create your personalized trips</h2>
+
+<h3>Login</h3>
+<h3>
+  <a href="/trips/new">Post new Wander Trip</a>
+</h3>
+
+<section class="all-trips">
+  <% for (let trip of trips) { %>
+  <div class="ui-card">
+      <img src="<%= trip.image_url %>" alt="trip.title">
+      <section class="content">
+        <h4>
+          <a href="/trips/<%= trip.id %>"><%= trip.title %></a>
+        </h4>
+      
+      </section>
+      <footer class="content">
+        <span>left</span>
+        <span>right</span>
+      </footer>
+  </div>
+  <% } %> 
+</section> 
+

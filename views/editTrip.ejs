@@ -1,0 +1,12 @@
+<h2>Edit Trip</h2>
+
+<form action="/trips/<%= trip.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="">Title</label>
+  <input type="text" name="title" value="<%= trip.title %>">
+  <label for="">Description</label>
+  <input type="text" name="description" value="<%= trip.description %>">
+  <label for="">Image_url</label>
+  <input type="text" name="image_url" value="<%= trip.image_url %>">
+  <button>Update</button>
+</form>

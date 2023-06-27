@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #faedcd;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+li > a {
+  text-decoration: none;
+  color: black;
+}
+
+li > a:hover {
+  color: #99582a;
+}
+
+.bg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tripwrap * {
+  border: 1px solid red;
+}
+
+.ui-card {
+  border-radius: 10px;
+  background-color: aliceblue;
+  margin-bottom: 10px ;
+  overflow: hidden;
+}
+
+.ui-card > img {
+  width: 100%;
+  height: 300px;
+}
+
+.ui-card > footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  padding: 10px;
+}
+
+@media (min-width:40rem) {
+  .all-trips {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.tripwrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.post-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.post-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.comment-container {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.de-container {
+  display: flex;
+  justify-content: space-between;
+  position:relative;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.deletebtn {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.pagewrap {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.all-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+}

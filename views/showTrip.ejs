@@ -1,0 +1,43 @@
+<h2>Your Wander plan to ...</h2>
+<h3><%= trip.title %></h3>
+
+<div class="pagewrap">
+  <div class="tripwrap">
+    <div class="post-container">
+      <img src="<%= trip.image_url %>" alt="image" class="post-image">
+      <div class="comment-container">
+        <p><%= trip.description %></p>
+      </div>
+
+      <footer class="de-container">
+        <span>
+          <a href="/trips/<%= trip.id %>/edit">Edit Trip</a>
+        </span>
+
+        <span>
+          <form action="/trips/<%= trip.id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+              <button class="deletebtn">Delete</button>
+          </form>
+        </span>
+      </footer>
+    </div>
+  </div>
+
+  <h3>Itinerary of <%= trip.title %></h3>
+  <section class="all-items">
+    <% for (let tripItem of tripItems) { %>
+    <div class="item-card">
+        <h3><%= tripItem.type %></h3>
+        <h4>
+          <a href="/tripItems/<%= tripItem.id %>"><%= tripItem.location_origin %></a>
+        </h4>
+        
+        <footer class="item-footer">
+          <span>left</span>
+          <span>right</span>
+        </footer>
+    </div>
+    <% } %> 
+  </section> 
+</div>
