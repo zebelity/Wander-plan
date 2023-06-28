@@ -4,21 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <nav>
-    <ul>
-    
+    <ul> 
       <li><a href="/">Homepage</a></li>
+      <% if (userId) { %>
+      <li>Logged in as <%= user.email %></li>
+      <li>
+        <form action="/logout" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <button>Logout</button>
+        </form>
+      </li>
+
+      <% } else { %>
+      <li><a href="/login">Login</a></li>
     </ul>
   </nav>
+  <h1 class="page-title">Wander Plan</h1>
+  <img class="login-bg" src="https://fasttrack-travel.com/wp-content/uploads/2022/08/Travel-BG-1200x725.png" alt="loginBG">
 
-  <h1>Wander Plan</h1>
-  
+      <% } %>
+      
   <%- body %>
   <footer class="bg">
-    <img src="https://www.seekpng.com/png/full/809-8093807_read-more-tour-and-travel-bg.png" alt="">
+     <img src="https://www.seekpng.com/png/full/809-8093807_read-more-tour-and-travel-bg.png" alt="">
   </footer>
+
 </body>
 </html>

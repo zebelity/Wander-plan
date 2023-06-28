@@ -1,0 +1,24 @@
+<h2>Post new Itinerary</h2>
+
+<form action="/tripItems" method="post">
+  <label for="">Type</label>
+  <select name="type" id="type">
+    <option value="Flight">Flight</option>
+    <option value="Stay">Stay</option>
+  </select>
+
+  <label for="">Location/Origin</label>
+  <input type="text" name="location_origin">
+  <label for="">Destination</label>
+  <input type="text" name="destination">
+  <label for="fromdatetime">From</label>
+  <input type="datetime-local" name="fromtime" id="fromdatetime">
+  <label for="totime">To</label>
+  <input type="datetime-local" name="totime" id="totime">
+  <label for="">Company</label>
+  <input type="text" name="company">
+  <label for="">Booking Reference</label>
+  <input type="text" name="booking_reference">
+  <input type="hidden" name="tripId" value="<%= tripId %>">
+  <button>Share</button>
+</form>

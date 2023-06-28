@@ -1,25 +1,19 @@
-<h2>Let create your personalized trips</h2>
-
-<h3>Login</h3>
-<h3>
-  <a href="/trips/new">Post new Wander Trip</a>
-</h3>
-
-<section class="all-trips">
-  <% for (let trip of trips) { %>
-  <div class="ui-card">
-      <img src="<%= trip.image_url %>" alt="trip.title">
-      <section class="content">
-        <h4>
-          <a href="/trips/<%= trip.id %>"><%= trip.title %></a>
-        </h4>
-      
-      </section>
-      <footer class="content">
-        <span>left</span>
-        <span>right</span>
-      </footer>
+<h2 class="subheading" >Let create your personalized trips</h2>
+<% if (userId ) { %>
+  <div class="content">
+    <h3 class="section-title">
+      <a class="btn" href="/trips/new">Post new Wander Trip</a>
+    </h3>
   </div>
-  <% } %> 
-</section> 
 
+  <section class="all-trips">
+    <% for (let trip of trips) { %>
+    <div class="ui-card">
+        <img src="<%= trip.image_url %>" alt="trip.title">
+          <h4>
+            <a class="trip-link" href="/trips/<%= trip.id %>"><%= trip.title %></a>
+          </h4>
+    </div>
+    <% } %> 
+  </section> 
+<% } %>

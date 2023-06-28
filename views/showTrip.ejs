@@ -1,4 +1,4 @@
-<h2>Your Wander plan to ...</h2>
+<h2 class="subheading">Your Wander plan to ...</h2>
 <h3><%= trip.title %></h3>
 
 <div class="pagewrap">
@@ -25,6 +25,9 @@
   </div>
 
   <h3>Itinerary of <%= trip.title %></h3>
+  <h4 class="section-title">
+    <a class="btn" href="/trips/<%= trip.id %>/tripItems/new">Post new Itinerary</a>
+  </h4>
   <section class="all-items">
     <% for (let tripItem of tripItems) { %>
     <div class="item-card">

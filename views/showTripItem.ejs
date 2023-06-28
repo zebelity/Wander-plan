@@ -1,0 +1,17 @@
+<h2><%= tripItem.type %></h2>
+
+<div class="item-card">
+  <h3>Location/Origin: <%= tripItem.location_origin %></h3>
+  <h3>Destination: <%= tripItem.destination %></h3>
+  <h3>From: <%= tripItem.fromtime %></h3>
+  <h3>To: <%= tripItem.totime %></h3>
+  <h3>Company: <%= tripItem.company %></h3>
+  <h3>Booking Reference: <%= tripItem.booking_reference %></h3>
+</div>
+
+<a href="/trips/<%= tripItem.trip_id %>/tripItems/<%= tripItem.id %>/edit">Edit</a>
+
+<form action="/trips/<%= tripItem.trip_id %>/tripItems/<%= tripItem.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+    <button class="deletebtn">Delete</button>
+</form>

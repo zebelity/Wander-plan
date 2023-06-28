@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -6,15 +7,14 @@ body {
   background-color: #faedcd;
 }
 
-h1, h2 {
-  text-align: center;
-}
-
 nav {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   padding: 10px;
+  background-color: #fefae0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 ul {
@@ -31,14 +31,72 @@ li {
 li > a {
   text-decoration: none;
   color: black;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 li > a:hover {
+  background-color: #99582a;
+  color: white;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.page-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 100px;
   color: #99582a;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subheading {
+  font-size: 32px;
+  color: #99582a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #99582a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #783e1d;
+}
+
+.login-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .bg {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -58,7 +116,8 @@ li > a:hover {
 
 .ui-card {
   border-radius: 10px;
-  background-color: aliceblue;
+  padding-bottom: 20px;
+  background-color: #ddb892;
   margin-bottom: 10px ;
   overflow: hidden;
 }
@@ -68,21 +127,24 @@ li > a:hover {
   height: 300px;
 }
 
-.ui-card > footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.content {
-  padding: 10px;
-}
-
 @media (min-width:40rem) {
   .all-trips {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
   }
+}
+
+.trip-link {
+  color: #99582a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.trip-link:hover {
+  color: #783e1d;
+  text-decoration: underline;
 }
 
 .tripwrap {
@@ -154,4 +216,8 @@ li > a:hover {
 .item-footer {
   display: flex;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Adjustments for medium-sized screens */
 }

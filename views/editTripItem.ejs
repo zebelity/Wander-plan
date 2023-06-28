@@ -1,0 +1,26 @@
+<h2>Edit Itinerary</h2>
+
+<form action="/trips/<%= tripItem.trip_id %>/tripItems/<%= tripItem.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="">Type</label>
+  <select name="type" id="type">
+    <option value="Flight" <%= tripItem.type === 'Flight' ? 'selected' : '' %>>Flight</option>
+    <option value="Stay" <%= tripItem.type === 'Stay' ? 'selected' : '' %>>Stay</option>
+  </select>
+
+  <label for="">Location/Origin</label>
+  <input type="text" name="location_origin" value="<%= tripItem.location_origin %>">
+  <label for="">Destination</label>
+  <input type="text" name="destination" value="<%= tripItem.destination %>">
+  <label for="fromdatetime">From</label>
+  <input type="datetime-local" name="fromtime" id="fromdatetime" value="<%= tripItem.fromtime %>">
+  <label for="totime">To</label>
+  <input type="datetime-local" name="totime" id="totime" value="<%= tripItem.totime %>">
+  <label for="">Company</label>
+  <input type="text" name="company" value="<%= tripItem.company %>">
+  <label for="">Booking Reference</label>
+  <input type="text" name="booking_reference" value="<%= tripItem.booking_reference %>">
+  
+  <button>Update</button>
+</form>
