@@ -11,7 +11,6 @@ router.get("/trips/:tripId/tripItems/new", ensureLoggedIn, (req, res) => {
 
 router.get("/tripItems/:id", ensureLoggedIn, (req, res) => {
   const sql = `SELECT * FROM itineraries WHERE id = $1;`
-
   db.query(sql, [req.params.id],(err, dbRes) => {
     if (err) {
       console.log(err)
@@ -32,11 +31,11 @@ router.post("/tripItems", ensureLoggedIn, (req,res) => {
   let tripId = req.body.tripId
 
   const sql = `
-  INSERT INTO itineraries (type, location_origin, destination, fromtime, totime, company, booking_reference, trip_id )
-  VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+  INSERT INTO itineraries (type, location_origin, destination, fromtime, totime, company, booking_reference, trip_id)
+  VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
   RETURNING id;`
 
-  db.query(sql, [type, location_origin, destination, fromtime, totime, company, bookingReference, tripId, req.session.userId], (err, dbRes) => {
+  db.query(sql, [type, location_origin, destination, fromtime, totime, company, bookingReference, tripId], (err, dbRes) => {
     if (err) {
       console.log(err)
     }

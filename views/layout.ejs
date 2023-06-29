@@ -6,12 +6,9 @@
   <title>Document</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Gloock&family=Lilita+One&family=Luckiest+Guy&family=Ranchers&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
-<header>
-  
-</header>
 <body>
   <nav>
     <ul> 
@@ -21,20 +18,21 @@
       <li>
         <form action="/logout" method="post">
           <input type="hidden" name="_method" value="delete">
-          <button>Logout</button>
+          <button type="submit">Logout</button>
         </form>
       </li>
-      <img src="https://i.imgur.com/sShpcjG.png" alt="">
+      <h1 class="page-title">Wander Plan</h1>
       <% } else { %>
       <li><a href="/login">Login</a></li>
     </ul>
   </nav>
+  
   <h1 class="page-title">Wander Plan</h1>
-  <%- body %>
+  <h2 class="subheading" >Please Login to start...</h2>
+  <img class="plane" src="https://i.imgur.com/sShpcjG.png" alt="">
   <img class="login-bg" src="https://fasttrack-travel.com/wp-content/uploads/2022/08/Travel-BG-1200x725.png" alt="loginBG">
-
       <% } %>
-      
+<%- body %>
   <footer class="bg">
     <img src="https://www.seekpng.com/png/full/809-8093807_read-more-tour-and-travel-bg.png" alt="">
   </footer>

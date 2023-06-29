@@ -1,5 +1,8 @@
 <h2 class="subheading">Your Wander plan to ...</h2>
-<h3><%= trip.title %></h3>
+<h3 class="title"><%= trip.title %></h3>
+<h4 class="section-title">
+  <a class="btn" href="/trips/<%= trip.id %>/tripItems/new">Post new Itinerary</a>
+</h4>
 
 <div class="pagewrap">
   <div class="tripwrap">
@@ -10,36 +13,29 @@
       </div>
 
       <footer class="de-container">
-        <span>
+        <div>
           <a href="/trips/<%= trip.id %>/edit">Edit Trip</a>
-        </span>
-
-        <span>
+        </div>
+        <div>
           <form action="/trips/<%= trip.id %>" method="post">
             <input type="hidden" name="_method" value="delete">
-              <button class="deletebtn">Delete</button>
+            <button class="deletebtn">Delete</button>
           </form>
-        </span>
+        </div>
       </footer>
     </div>
   </div>
-
-  <h3>Itinerary of <%= trip.title %></h3>
-  <h4 class="section-title">
-    <a class="btn" href="/trips/<%= trip.id %>/tripItems/new">Post new Itinerary</a>
-  </h4>
+  <h3 class="item-title">Itinerary of <%= trip.title %></h3>
   <section class="all-items">
     <% for (let tripItem of tripItems) { %>
     <div class="item-card">
         <h3><%= tripItem.type %></h3>
-        <h4>
-          <a href="/tripItems/<%= tripItem.id %>"><%= tripItem.location_origin %></a>
-        </h4>
-        
-        <footer class="item-footer">
-          <span>left</span>
-          <span>right</span>
-        </footer>
+        <div class="item-footer">
+          <h4>
+            <a class="item-link" href="/tripItems/<%= tripItem.id %>"><%= tripItem.location_origin %></a>
+          </h4>
+          <h4><%= tripItem.destination %></h4>
+        </div>
     </div>
     <% } %> 
   </section> 
