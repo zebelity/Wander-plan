@@ -3,6 +3,10 @@
 ## Link of my application
 This site was built using [rander page](https://wander-plan.onrender.com).
 
+## Demo-user
+email: chatkamon@ga.co
+password: mooham
+
 ## Description
 The application allows users to add itinerary items to their trips, including flights, car trips, hotels, and sightseeing activities. Users can specify the type of each itinerary item, along with relevant details such as location, time, and booking references.
 
@@ -55,6 +59,7 @@ To ensure privacy and personalized experiences, the application provides user au
 
 
 ## Future Enhancements
+* Implement a user account creation feature that allows new users to sign up and create their own accounts. 
 * Enable users to upload photos from their phone or computer to enhance their trip documentation and memories. 
 * Integration with external APIs to fetch real-time flight and hotel information.
 * Social media sharing functionality to share trips with friends and family.

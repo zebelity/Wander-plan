@@ -115,7 +115,7 @@ button[type="submit"]:hover,
   width: auto;
   animation: fly-right-to-left 5s linear infinite;
   position: absolute;
-  top: 65%;
+  top: 67%;
   left: 0;
   transform: translateX(100%);
   z-index: 2;
