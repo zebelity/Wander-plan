@@ -51,26 +51,16 @@ To ensure privacy and personalized experiences, the application provides user au
 
 ## Features
 
-<<<<<<< HEAD
 <img width="1328" alt="image" src="https://github.com/zebelity/Wander-plan/assets/112873206/eae286d3-1a75-42e0-8e99-ecd8b612ffcd">
-=======
-  <img width="1328" alt="image" src="https://github.com/zebelity/Wander-plan/assets/112873206/eae286d3-1a75-42e0-8e99-ecd8b612ffcd">
->>>>>>> 8a6a79e02cf371248b99ccd38414b1c0c9b6c7be
 
 <img width="1323" alt="image" src="https://github.com/zebelity/Wander-plan/assets/112873206/b85ce347-d083-4dfe-a0a6-d5919f3ff1de">
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 8a6a79e02cf371248b99ccd38414b1c0c9b6c7be
 * User-friendly interface for creating and managing trips.
 * Add flights, car trips, hotels, and sightseeing activities as itinerary items of the trip.
 * Specify detailed information for each itinerary item, such as location, time, and booking references.
 * User authentication functionality to ensure privacy and personalized experiences.
 * Secure login system to protect user data.
 * Easily access and view your own trips and itineraries after logging in.
-
 
 ## Future Enhancements
 * Implement a user account creation feature that allows new users to sign up and create their own accounts. 
